@@ -1,0 +1,31 @@
+.logocadre {
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  gap: 1px;
+  background: #8b1313;
+  background: var(--light-grey-input-fiels-forms, #f6f6f6);
+  height: 51px;
+  width: 90px;
+  border-radius: 400px;
+}
+.logot1 {
+  color: #000;
+  text-align: center;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  border-color: aquamarine;
+}
+.logot2 {
+  background: linear-gradient(90deg, #7c736a, #adaea8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}

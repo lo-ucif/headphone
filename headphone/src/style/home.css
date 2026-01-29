@@ -1,0 +1,59 @@
+.home01 {
+  /* width: 100%; */
+  display: flex;
+  padding: 60px 62px 60px 62px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  background: #f6f6f6;
+}
+
+.homepresentation {
+  display: flex;
+  height: 632px;
+  width: 100%;
+  padding: 86px 643px 86px 53px;
+  align-items: start;
+  border-radius: 40px;
+  background-image: url("../img/home\ l.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.homepertext {
+  width: 619px;
+  height: 560px;
+  padding: 10px;
+  align-items: start;
+  padding-left: 20px;
+}
+
+.homepertext h1 {
+  color: #000;
+  font-family: Itim;
+  font-size: 70px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.homepertext p {
+  color: #f6f6f6;
+  font-family: inter;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px; /* 130% */
+  letter-spacing: 0.2px;
+}
+.home2but{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 15px;
+    gap: 20px;
+    padding: 20px 0px;
+}
+.home5text{
+  
+}
