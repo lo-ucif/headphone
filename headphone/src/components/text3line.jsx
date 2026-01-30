@@ -1,5 +1,5 @@
 import Hometext05 from "./hometext05";
-export default function Text3line() {
+export default function Text3line({title01 , title02 , title03}) {
   const styletxt3 = {
     display: "inline-flex",
     padding: "0 13px",
@@ -27,9 +27,9 @@ export default function Text3line() {
   };
   return (
     <div style={styletxt3}>
-      <Hometext05 value={"choose"} />
-      <div style={styletxt3h1}>Why choose our headphones</div>
-      <div style={styletxt3p}>+ 3 Import special to choose</div>
+      <Hometext05 value={title01} />
+      <div style={styletxt3h1}>{title02}</div>
+      <div style={styletxt3p}>{title03}</div>
     </div>
   );
 }

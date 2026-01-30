@@ -1,4 +1,5 @@
 import "../style/home.css";
+import { NavLink } from "react-router-dom";
 import Homebut01 from "../components/homebut01";
 import Hometext05 from "../components/hometext05";
 export default function Home01() {
@@ -13,8 +14,12 @@ export default function Home01() {
             wherever you go.
           </p>
           <div className="home2but">
-            <Homebut01 value="shop" />
-            <Homebut01 value="buy" />
+            <NavLink to="/store" className="nav-link">
+              <Homebut01 value="shop" />
+            </NavLink>
+            <NavLink to="/store" className="nav-link">
+              <Homebut01 value="buy" />
+            </NavLink>
           </div>
           <div className="home5text">
             <Hometext05 value={"Classis"} />

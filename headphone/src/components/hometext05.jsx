@@ -2,7 +2,7 @@ export default function Hometext05({ value }) {
   const style5bu = {
     display: "flex",
     width: "fit-content",
-    padding: "10px 16px",
+    padding: "10px 12px",
     justifyContent: "flex-end",
     alignItems: "center",
     gap: "10px",

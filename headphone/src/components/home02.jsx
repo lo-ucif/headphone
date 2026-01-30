@@ -4,7 +4,11 @@ import Home2text from "./home2text";
 export default function Home02() {
   return (
     <div className="home02">
-      <Text3line />
+      <Text3line
+        title01="choose"
+        title02="Why choose our headphones"
+        title03="+ 3 Import special to choose"
+      />
       <div className="home02pre">
         <div className="container">
           <Home2text
