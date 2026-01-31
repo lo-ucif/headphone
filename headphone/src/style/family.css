@@ -8,3 +8,10 @@
   align-items: center;
   gap: 60px;
 }
+.family6cadre {
+  display: flex;
+  gap: 70px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}

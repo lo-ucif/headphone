@@ -52,8 +52,8 @@ export default function Navbar() {
               gradientUnits="userSpaceOnUse"
             >
               {" "}
-              <stop stop-color="#7C736A" />{" "}
-              <stop offset="1" stop-color="#ADAEA8" />{" "}
+              <stop stop-color="#000000" />{" "}
+              <stop offset="1" stop-color="#000000" />{" "}
             </linearGradient>{" "}
             <clipPath id="clip0_9_327">
               {" "}

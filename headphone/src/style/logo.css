@@ -1,10 +1,12 @@
 .logocadre {
   display: flex;
-  align-items:center;
+  align-items: center;
   justify-content: center;
   gap: 1px;
   background: #8b1313;
-  background: var(--light-grey-input-fiels-forms, #f6f6f6);
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   height: 51px;
   width: 90px;
   border-radius: 400px;

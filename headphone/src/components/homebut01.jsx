@@ -1,7 +1,7 @@
 export default function Homebut01({ value }) {
   const buttonStyle = {
     display: "flex",
-    width: "110px",
+    width: "150px",
     padding: "12px",
     justifyContent: "center",
     alignItems: "center",
