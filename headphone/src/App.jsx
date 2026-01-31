@@ -15,6 +15,9 @@ export default function App() {
         <Route path="/store" element={<Store />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <div style={{ textAlign: "center" }}>
+        headphone sound @ all rights reserved 2026
+      </div>
     </Router>
   );
 }

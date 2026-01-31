@@ -1,6 +1,4 @@
-import { useState } from "react";
-
-export default function Colorselect() {
+export default function Colorselect({ setActiveColor, activeColor }) {
   const listcolor = {
     display: "flex",
     width: "317px",
@@ -31,10 +29,8 @@ export default function Colorselect() {
     "#000000",
   ];
 
-  const [coloractive, setcoloractive] = useState("#224692");
-
-  const changecolor = (color) => {
-    setcoloractive(color);
+  const changecolorfunction = (color) => {
+    setActiveColor(color);
   };
 
   return (
@@ -42,12 +38,12 @@ export default function Colorselect() {
       {colors.map((color, index) => (
         <div
           key={index}
-          onClick={() => changecolor(color)}
+          onClick={() => changecolorfunction(color)}
           style={{
             ...itemcolor,
             backgroundColor: color,
             border:
-              coloractive === color
+              activeColor === color
                 ? "3px solid black"
                 : "3px solid transparent",
           }}

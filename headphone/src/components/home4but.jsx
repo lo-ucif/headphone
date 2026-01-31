@@ -5,6 +5,8 @@ export default function Home04but({
   onClick,
   active,
   colorselect,
+  setActiveColor,
+  activeColor,
 }) {
   const styletot = {
     borderRadius: "30px",
@@ -15,6 +17,7 @@ export default function Home04but({
     justifyContent: "start",
     alignItems: "start",
     gap: "4px",
+    cursor: "pointer",
   };
   const stylep1 = {
     display: "Flex",
@@ -48,8 +51,9 @@ export default function Home04but({
   const logoStyle = {
     width: "40px",
     height: "40px",
-    flexShrink: 0, // flex-shrink
-    aspectRatio: "1 / 1", // aspect-ratio
+    flexShrink: 0,
+    aspectRatio: "1 / 1",
+    cursor: "pointer",
   };
   const changeStyle = () => {
     // setIsActive((prev) => !prev);
@@ -80,7 +84,14 @@ export default function Home04but({
       <div style={stylep1}>
         <div style={styletxt01}>{title}</div>
         <div style={styletxt02}>{text}</div>
-        <div>{colorselect && <Colorselect />}</div>
+        <div>
+          {colorselect && (
+            <Colorselect
+              setActiveColor={setActiveColor}
+              activeColor={activeColor}
+            />
+          )}
+        </div>
       </div>
     </div>
   );

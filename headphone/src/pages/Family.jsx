@@ -1,3 +1,11 @@
+import Familydes from "../components/familydes";
+import "../style/family.css";
 export default function Family() {
-  return <h1>صفحة العائلة</h1>;
+  return (
+    <div>
+      <Familydes />
+      <Familydes />
+      <Familydes />
+    </div>
+  );
 }
