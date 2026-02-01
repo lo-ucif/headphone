@@ -1,4 +1,5 @@
 import "../style/information.css";
+import "../style/buttonStyle.css";
 
 const falinfStyleimg = {
   width: "600px",
@@ -19,8 +20,7 @@ export default function Information({ text010, text020, onClose, img, info }) {
             </div>
 
             <div className="twobut">
-              <div className="button">{text020}</div>
-              <div className="button">Buy</div>
+              <div className="buttonp">{text020}</div>
             </div>
           </div>
         </div>

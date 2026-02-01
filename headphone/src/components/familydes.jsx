@@ -19,7 +19,7 @@ export default function Familydes({ item, title01, title02, title03 }) {
           {item.map((le, index) => (
             <Familyelement
               key={index}
-              img={le.img}
+              img={le.img} 
               text01={le.text01}
               text02={le.text02}
               more={() => openInformation(le)}

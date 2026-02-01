@@ -14,7 +14,7 @@ export default function Home01() {
             wherever you go.
           </p>
           <div className="home2but">
-            <NavLink to="/store" className="nav-link">
+            <NavLink to="/family" className="nav-link">
               <Homebut01 value="shop" />
             </NavLink>
             <NavLink to="/store" className="nav-link">

@@ -1,3 +1,4 @@
+import "../style/buttonStyle.css";
 export default function Familtbut01({ color, value, onClicked }) {
   const butstyle = {
     display: "flex",
@@ -14,7 +15,9 @@ export default function Familtbut01({ color, value, onClicked }) {
   };
   return (
     <div onClick={onClicked}>
-      <div style={butstyle}>{value}</div>
+      <div className="buttonp" style={butstyle}>
+        {value}
+      </div>
     </div>
   );
 }

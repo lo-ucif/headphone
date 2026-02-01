@@ -204,7 +204,7 @@ export default function Family() {
         item={familyItems}
         title01={"v1 2022"}
         title02={"version one headphones"}
-        title03={"after 4 years"}
+        title03={"after 4 years"} 
       />
       <Familydes
         item={headsetItems}

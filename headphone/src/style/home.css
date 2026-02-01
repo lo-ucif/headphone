@@ -1,5 +1,4 @@
 .home01 {
-  /* width: 100%; */
   display: flex;
   padding: 60px 62px 60px 62px;
   justify-content: center;
@@ -193,3 +192,5 @@
   font-weight: 200;
   line-height: normal;
 }
+
+

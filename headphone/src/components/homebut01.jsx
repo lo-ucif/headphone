@@ -1,3 +1,4 @@
+import "../style/buttonStyle.css"
 export default function Homebut01({ value }) {
   const buttonStyle = {
     display: "flex",
@@ -23,7 +24,7 @@ export default function Homebut01({ value }) {
   };
 
   return (
-    <div style={buttonStyle}>
+    <div className="buttonp" style={buttonStyle}>
       <div style={textstyle}>{value}</div>
     </div>
   );
