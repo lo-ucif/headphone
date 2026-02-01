@@ -52,13 +52,9 @@ export default function Contact4but({
     cursor: "pointer",
     marginTop: "2px",
   };
-  const changeStyle = (t) => {
-    // alert(t)
-  };
 
   const handleDivClick = () => {
     onClick();
-    changeStyle();
   };
 
   return (

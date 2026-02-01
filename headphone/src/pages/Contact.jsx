@@ -103,16 +103,32 @@ export default function Contact() {
             active={active}
             onClick={() => setactive(1)}
           />
-          <Contact4but
-            title={"Contact us"}
-            svg={icons[1]}
-            onClick={() => setactive(2)}
-          />
-          <Contact4but
-            title={"Linked in"}
-            svg={icons[2]}
-            onClick={() => setactive(3)}
-          />
+          <a
+            href="https://mail.google.com/mail/?view=cm&to=louciftamer3@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <Contact4but
+              title="Contact us"
+              svg={icons[1]}
+              onClick={() => setactive(2)}
+            />
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/ahmed-loucif-757854342"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <Contact4but
+              title="LinkedIn"
+              svg={icons[2]}
+              onClick={() => setactive(3)}
+            />
+          </a>
+
           <a
             href="https://github.com/lo-ucif"
             target="_blank"
