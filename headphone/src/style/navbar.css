@@ -8,6 +8,7 @@
   justify-content: space-around;
   position: fixed;
   inset: 0;
+  z-index: 900;
 }
 .dachboard {
   padding: 16px 35px;

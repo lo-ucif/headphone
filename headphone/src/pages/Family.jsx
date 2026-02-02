@@ -1,17 +1,17 @@
 import Familydes from "../components/familydes";
 import "../style/family.css";
-import img01 from "../img/g14.png";
-import img02 from "../img/1.jpg";
-import img03 from "../img/2.jpg";
-import img04 from "../img/3.jpg";
-import img05 from "../img/4.jpg";
-import img06 from "../img/5.jpg";
-import img07 from "../img/pl g5.jpg";
-import img08 from "../img/pl g6.jpg";
-import img09 from "../img/6.jpg";
-import img10 from "../img/3.jpg";
-import img11 from "../img/7.jpg";
-import img12 from "../img/5.jpg";
+import img01 from "../img/11.png";
+import img02 from "../img/12.png";
+import img03 from "../img/16.png";
+import img04 from "../img/17.png";
+import img05 from "../img/18.png";
+import img06 from "../img/19.png";
+import img07 from "../img/13.png";
+import img08 from "../img/20.png";
+import img09 from "../img/21.png";
+import img10 from "../img/14.png";
+import img11 from "../img/22.png";
+import img12 from "../img/15.png";
 export default function Family() {
   const familyItems = [
     {

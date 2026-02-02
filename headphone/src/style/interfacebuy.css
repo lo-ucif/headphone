@@ -1,11 +1,11 @@
 .interfacebuy {
   position: fixed;
   left: 50%;
-  width: 400px;
-  height: 150px;
-  padding: 20px;
-  background: white;
-  border-radius: 20px;
+  width: fit-content;
+  /* height: 70px; */
+  /* padding: 20px; */
+  background: transparent;
+  border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
   transform: translateX(-50%);
   z-index: 999;
@@ -13,7 +13,7 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .interfacebuy.show {
@@ -30,7 +30,7 @@
     opacity: 0;
   }
   to {
-    top: 22%;
+    top: 12%;
     opacity: 1;
     transform: translate(-50%, -50%);
   }
@@ -38,7 +38,7 @@
 
 @keyframes slideUp {
   from {
-    top: 20%;
+    top: 12%;
     opacity: 1;
     transform: translate(-50%, -50%);
   }
@@ -55,14 +55,21 @@
 }
 .but {
   display: flex;
-  width: 130px;
+  /* width: 130px; */
   padding: 16px 24px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 400px;
+  border-radius: 15px;
   background: #f6f6f6;
   border: 0;
+  color: white;
+}
+.but.true {
+  background-color: #399153;
+}
+.but.false {
+  background-color: #cf080c;
 }
 .text {
   color: #000;

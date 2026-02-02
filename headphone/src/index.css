@@ -71,4 +71,6 @@ body {
   font-family: Itim;
   margin: 0;
   background-color: #f5f5f7;
+  height: 100%;
+  overflow-y: scroll;
 }

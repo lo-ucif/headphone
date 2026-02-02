@@ -1,12 +1,24 @@
 import "../style/store.css";
+import "../style/interfacebuy.css";
 import Storeinf3but from "./storeinf3but";
 
-export default function Storepre( {namehead , color , price , date ,img}) {
-
+export default function Storepre({
+  namehead,
+  color,
+  price,
+  date,
+  img,
+  ondelet,
+}) {
   return (
     <div className="storele">
       <div className="storeinfo">
-        <div className="namehead">{namehead}</div>
+        <div className="namehead">
+          <div>{namehead}</div>
+          <button onClick={() => ondelet(namehead)} className="buttoncancel">
+            <div>cancel !</div>
+          </button>
+        </div>
         <div className="otherinf">
           <Storeinf3but title="Model:" text={color} />
           <Storeinf3but title="Price:" text={price} />
