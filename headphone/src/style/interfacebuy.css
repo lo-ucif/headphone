@@ -40,7 +40,7 @@
   from {
     top: 12%;
     opacity: 1;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
   }
   to {
     top: -200px;

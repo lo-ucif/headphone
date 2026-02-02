@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import "../style/home04.css";
 import Text3line from "./text3line";
 import Home04but from "./home4but";
 import imgst01 from "../img/pl g6.jpg";
@@ -133,7 +134,7 @@ export default function Home04() {
           ))}
         </div>
         <div className="home04pref2">
-          <img style={home04Styleimg} src={activeimg} />
+          <img style={home04Styleimg}  src={activeimg} />
         </div>
       </div>
     </div>

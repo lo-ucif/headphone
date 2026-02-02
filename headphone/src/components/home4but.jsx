@@ -1,4 +1,5 @@
 import Colorselect from "./colorselect";
+import "../style/home04.css";
 export default function Home04but({
   title,
   text,
@@ -8,53 +9,6 @@ export default function Home04but({
   setActiveColor,
   activeColor,
 }) {
-  const styletot = {
-    borderRadius: "30px",
-    background: "#EEEEF2",
-    display: "flex",
-    padding: "12px",
-    paddingRight: "20px",
-    justifyContent: "start",
-    alignItems: "start",
-    gap: "4px",
-    cursor: "pointer",
-  };
-  const stylep1 = {
-    display: "Flex",
-    justifyContent: "start",
-    alignItems: "start",
-    // gap: "16px",
-    flexDirection: "column",
-  };
-  const styletxt01 = {
-    color: "#000",
-    fontFamily: "Itim",
-    fontSize: "28px",
-    fontStyle: "normal",
-    fontWeight: 400,
-    lineHeight: "normal",
-  };
-  const styletxt02 = {
-    // width: "480px",
-    color: "#000",
-    fontFamily: "inter",
-    fontSize: "16px",
-    fontStyle: "normal",
-    fontWeight: 600,
-    letterSpacing: "0.5px",
-    ...(active && {
-      marginRight: "25px",
-      marginBottom: "20px",
-      marginTop: "10px",
-    }),
-  };
-  const logoStyle = {
-    width: "40px",
-    height: "40px",
-    flexShrink: 0,
-    aspectRatio: "1 / 1",
-    cursor: "pointer",
-  };
   const changeStyle = () => {
     // setIsActive((prev) => !prev);
   };
@@ -65,9 +19,13 @@ export default function Home04but({
   };
 
   return (
-    <div style={styletot} onClick={handleDivClick}>
+    <div
+      className={`styletot ${active ? "active" : ""}`}
+      // className="styletot"
+      onClick={handleDivClick}
+    >
       <svg
-        style={logoStyle}
+        className="logostyle"
         xmlns="http://www.w3.org/2000/svg"
         width="40"
         height="40"
@@ -81,9 +39,9 @@ export default function Home04but({
         <path d="M12.8 19.2002H27.2V20.8002H12.8V19.2002Z" fill="black" />
         <path d="M19.2 12.7998H20.8V27.1998H19.2V12.7998Z" fill="black" />
       </svg>
-      <div style={stylep1}>
-        <div style={styletxt01}>{title}</div>
-        <div style={styletxt02}>{text}</div>
+      <div className="stylep1">
+        <div className="styletxt01">{title}</div>
+        <div className={`styletxt02 ${active ? "active" : ""}`}>{text}</div>
         <div>
           {colorselect && (
             <Colorselect
