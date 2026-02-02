@@ -72,11 +72,15 @@
   height: 705px;
   flex-shrink: 0;
   aspect-ratio: 1 / 1;
-  object-fit: cover; /* لتغطية الصورة بالكامل */
-  transition: opacity 0.4s ease-in-out;
+  object-fit: cover;
+  transition:
+    opacity 0.4s ease-in-out,
+    transform 0.4s ease-in-out;
   opacity: 1;
+  transform: scale(1);
 }
 
-.home04pref2 img.fade-out {
+.home04pref2 img.fade {
   opacity: 0;
+  transform: scale(0.95);
 }

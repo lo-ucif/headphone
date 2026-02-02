@@ -45,33 +45,41 @@ const info = [
 
 export default function Home04() {
   const [activeButton, setActiveButton] = useState("1");
-  const [activeimg, setActiveimg] = useState(null);
+  const [activeimg, setActiveimg] = useState(imgst01);
   const [activeColor, setActiveColor] = useState(null);
-  const [lastcolor, setlastcolor] = useState(null);
+  const [lastcolor, setlastcolor] = useState(imgst01);
+  // const [fade, setFade] = useState(false);
   const handleClick = (id) => {
     setActiveButton(id);
 
-    switch (id) {
-      case "1":
-        setActiveimg(lastcolor);
-        break;
-      case "2":
-        setActiveimg(imgst02);
-        break;
-      case "3":
-        setActiveimg(imgst03);
-        break;
-      case "4":
-        setActiveimg(imgst04);
-        break;
-      default:
-        break;
-    }
+    // setFade(true);
+
+    setTimeout(() => {
+      switch (id) {
+        case "1":
+          setActiveimg(lastcolor);
+          break;
+        case "2":
+          setActiveimg(imgst02);
+          break;
+        case "3":
+          setActiveimg(imgst03);
+          break;
+        case "4":
+          setActiveimg(imgst04);
+          break;
+        default:
+          break;
+      }
+
+      // setFade(false);
+    }, 300);
   };
-  useEffect(() => {
-    switch (activeColor) {
+
+  const changedcolorimg = (activedColor) => {
+    setActiveColor(activedColor);
+    switch (activedColor) {
       case "#876C8B":
-        // eslint-disable-next-line react-hooks/set-state-in-effect
         setActiveimg(imgst05);
         setlastcolor(imgst05);
         break;
@@ -92,22 +100,25 @@ export default function Home04() {
         setlastcolor(imgst09);
         break;
       case "#B6B6B6":
-        setlastcolor(imgst10);
         setActiveimg(imgst10);
+        setlastcolor(imgst10);
         break;
       case "#5C5C5C":
-        setlastcolor(imgst11);
         setActiveimg(imgst11);
+        setlastcolor(imgst11);
         break;
       case "#000000":
-        setlastcolor(imgst07);
         setActiveimg(imgst07);
+        setlastcolor(imgst07);
+
         break;
       default:
-        setlastcolor(imgst01);
         setActiveimg(imgst01);
+        setlastcolor(imgst01);
     }
-  }, [activeColor]);
+  };
+
+  useEffect(() => {}, [activeColor]);
 
   return (
     <div className="home04">
@@ -128,13 +139,17 @@ export default function Home04() {
               onClick={() => handleClick(btn.id)}
               img={imgst01}
               colorselect={index === 0 && activeButton === btn.id}
-              setActiveColor={setActiveColor}
+              setActiveColor={changedcolorimg}
               activeColor={activeColor}
             />
           ))}
         </div>
         <div className="home04pref2">
-          <img style={home04Styleimg}  src={activeimg} />
+          <img
+            style={home04Styleimg}
+            // className={fade ? "fade" : ""}
+            src={activeimg}
+          />
         </div>
       </div>
     </div>

@@ -21,7 +21,6 @@ export default function Home04but({
   return (
     <div
       className={`styletot ${active ? "active" : ""}`}
-      // className="styletot"
       onClick={handleDivClick}
     >
       <svg

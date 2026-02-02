@@ -38,7 +38,10 @@ export default function Colorselect({ setActiveColor, activeColor }) {
       {colors.map((color, index) => (
         <div
           key={index}
-          onClick={() => changecolorfunction(color)}
+          onClick={(e) => {
+            e.stopPropagation();
+            changecolorfunction(color);
+          }}
           style={{
             ...itemcolor,
             backgroundColor: color,
