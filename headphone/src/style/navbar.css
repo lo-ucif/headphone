@@ -52,3 +52,37 @@
 .nav-link.active {
   color: #685f56;
 }
+.navbarphone {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: none;
+  flex-direction: column;
+  width: 90%;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+}
+.dachboardphone {
+  /* padding: 16px 35px; */
+  justify-content: center;
+  border-radius: 20px;
+  background-color: rgb(255, 149, 149);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+  .navbarphone {
+    display: none;
+  }
+}

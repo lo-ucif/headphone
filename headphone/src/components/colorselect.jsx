@@ -1,23 +1,6 @@
+import "../style/home04.css";
+
 export default function Colorselect({ setActiveColor, activeColor }) {
-  const listcolor = {
-    display: "flex",
-    width: "317px",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: "10px",
-  };
-
-  const itemcolor = {
-    display: "flex",
-    width: "28px",
-    height: "28px",
-    justifyContent: "center",
-    borderRadius: "50%",
-    alignItems: "center",
-    aspectRatio: "1 / 1",
-    cursor: "pointer",
-  };
-
   const colors = [
     "#876C8B",
     "#86B2BD",
@@ -34,21 +17,15 @@ export default function Colorselect({ setActiveColor, activeColor }) {
   };
 
   return (
-    <div style={listcolor}>
+    <div className="listcolor">
       {colors.map((color, index) => (
         <div
           key={index}
+          className={`itemcolor ${activeColor === color ? "active" : ""}`}
+          style={{ backgroundColor: color }}
           onClick={(e) => {
             e.stopPropagation();
             changecolorfunction(color);
-          }}
-          style={{
-            ...itemcolor,
-            backgroundColor: color,
-            border:
-              activeColor === color
-                ? "3px solid black"
-                : "3px solid transparent",
           }}
         />
       ))}

@@ -20,10 +20,10 @@ export default function Home04but({
 
   return (
     <div
-      className={`styletot ${active ? "active" : ""}`}
+      className={`styletotal ${active ? "active" : ""}`}
       onClick={handleDivClick}
     >
-      <svg
+      <svg 
         className="logostyle"
         xmlns="http://www.w3.org/2000/svg"
         width="40"
@@ -38,9 +38,9 @@ export default function Home04but({
         <path d="M12.8 19.2002H27.2V20.8002H12.8V19.2002Z" fill="black" />
         <path d="M19.2 12.7998H20.8V27.1998H19.2V12.7998Z" fill="black" />
       </svg>
-      <div className="stylep1">
-        <div className="styletxt01">{title}</div>
-        <div className={`styletxt02 ${active ? "active" : ""}`}>{text}</div>
+      <div className="stylep11">
+        <div className="styletxt011">{title}</div>
+        <div className={`styletxt021 ${active ? "active" : ""}`}>{text}</div>
         <div>
           {colorselect && (
             <Colorselect

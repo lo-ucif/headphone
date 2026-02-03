@@ -6,7 +6,7 @@ export default function Home01() {
   return (
     <div className="home01">
       <div className="homepresentation">
-        <div className="homepertext">
+        <div className="homepertext onetwo">
           <h1>Experience sound like never before</h1>
           <p>
             Welcome to lunax — premium audio designed for your lifestyle.
@@ -29,6 +29,7 @@ export default function Home01() {
             <Hometext05 value={"Bluetooth"} />
           </div>
         </div>
+        <div className="onetwo"></div>
       </div>
     </div>
   );

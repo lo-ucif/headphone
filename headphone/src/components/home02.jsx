@@ -18,7 +18,7 @@ export default function Home02() {
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="35"
-                height="38"
+                height="35"
                 viewBox="0 0 35 38"
                 fill="none"
               >
@@ -38,8 +38,8 @@ export default function Home02() {
             logo={
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="32"
-                height="32"
+                width="35"
+                height="35"
                 viewBox="0 0 32 32"
                 fill="none"
               >
@@ -60,8 +60,8 @@ export default function Home02() {
           logo={
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="39"
-              height="39"
+              width="35"
+              height="35"
               viewBox="0 0 39 39"
               fill="none"
             >

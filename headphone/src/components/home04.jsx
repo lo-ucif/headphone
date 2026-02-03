@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "../style/home04.css";
+import "../style/home.css";
 import Text3line from "./text3line";
 import Home04but from "./home4but";
 import imgst01 from "../img/pl g6.jpg";
@@ -14,12 +15,6 @@ import imgst09 from "../img/7.jpg";
 import imgst10 from "../img/8.jpg";
 import imgst11 from "../img/12.jpg";
 
-const home04Styleimg = {
-  width: "705px",
-  height: "705px",
-  flexShrink: 0,
-  aspectRatio: "1 / 1",
-};
 const info = [
   {
     id: "1",
@@ -147,11 +142,7 @@ export default function Home04() {
           ))}
         </div>
         <div className="home04pref2">
-          <img
-            style={home04Styleimg}
-            className={fade ? "fade" : ""}
-            src={activeimg}
-          />
+          <img className={fade ? "fade" : ""} src={activeimg} />
         </div>
       </div>
     </div>
