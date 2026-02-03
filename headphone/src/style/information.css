@@ -1,53 +1,63 @@
 .familyinfo {
   display: flex;
-  padding: 10px 62px 60px 62px;
   justify-content: center;
   align-items: center;
   flex-shrink: 0;
   background: #f6f6f6;
-  flex-wrap: wrap;
-  gap: 55px;
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.2);
   z-index: 999;
 }
 .familyinfpre {
   display: flex;
-  width: 1315px;
-  gap: 10px;
   flex-shrink: 0;
   border-radius: 40px;
   background: #fff;
+
+  transform: translateX(100%);
+  opacity: 0;
+
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
 }
+
+.familyinfpre.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.familyinfpre.hide {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
 .familyinfpref1 {
   flex: 1;
-  padding: 40px;
-  height: 629px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px;
 }
 .familyinfpref2 {
+  flex: 1;
   display: flex;
   border-radius: 40px;
-  padding: 20px;
   justify-content: center;
   align-items: center;
 }
 .finff1inf {
-  /* width: 567px;
-    height: 629px; */
   border-radius: 40px;
   background: #eeeef2;
   flex-shrink: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 35px;
+  padding: 20px;
   justify-content: start;
+  gap: 5px;
 }
 .textinf {
   color: #000;
@@ -55,15 +65,13 @@
   font-size: 30px;
   font-style: normal;
   font-weight: 400;
-  line-height: 180%; /* 54px */
+  line-height: 180%;
 }
 .infname {
   display: flex;
-  /* width: 248px; */
   padding: 16px;
   justify-content: center;
   align-items: center;
-  /* gap: 10px; */
   border-radius: 400px;
   background: #fff;
   color: #000;
@@ -74,11 +82,7 @@
   font-weight: 400;
   line-height: normal;
 }
-.twobut {
-  display: flex;
-  padding: 19px 0;
-  gap: 20px;
-}
+
 .button {
   display: flex;
   padding: 16px;
@@ -122,4 +126,24 @@
   background-color: #ffffff;
   transform: scale(1.3);
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+.falinfStyleimg {
+  width: 600px;
+  height: 600px;
+}
+@media (max-width: 768px) {
+  .familyinfpre {
+    flex-direction: column;
+  }
+  .textinf {
+    font-size: 20px;
+    line-height: 130%;
+  }
+  .falinfStyleimg {
+    width: 250px;
+    height: 250px;
+  }
+  .familyinfo {
+    /* padding: 2%; */
+  }
 }

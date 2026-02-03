@@ -10,9 +10,9 @@
 .family6cadre {
   display: flex;
   gap: 70px;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .twobut {
@@ -24,8 +24,6 @@
 }
 
 .card {
-  width: 360px;
-  height: 392px;
   border-radius: 30px;
   background: #fff;
   display: flex;
@@ -70,4 +68,13 @@
 
 .card:hover img {
   transform: scale(1.4);
+}
+@media (max-width: 768px) {
+  .family6cadre {
+    flex-direction: column;
+    width: 90%;
+  }
+  .family04pre {
+    padding: 2%;
+  }
 }
