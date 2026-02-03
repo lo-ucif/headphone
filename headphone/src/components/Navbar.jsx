@@ -1,8 +1,55 @@
 import { NavLink } from "react-router-dom";
 import Logo from "./logo";
 import "../style/navbar.css";
+import { useState } from "react";
 
 export default function Navbar() {
+  const svgs = [
+    <svg
+      key="menu"
+      xmlns="http://www.w3.org/2000/svg"
+      width="25"
+      height="25"
+      viewBox="0 0 100 87"
+      fill="none"
+    >
+      <path
+        d="M5 5H94.8333M5 43.5H94.8333M5 82H94.8333"
+        stroke="black"
+        strokeWidth="10"
+        strokeLinecap="round"
+      />
+    </svg>,
+
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      viewBox="0 0 40 40"
+      fill="none"
+    >
+      <path
+        d="M9.05331 30.9468C10.0133 31.9068 11.57 31.9068 12.5316 30.9468L20 23.4768L27.4683 30.9451C27.9293 31.4064 28.5547 31.6656 29.2069 31.6657C29.859 31.6659 30.4846 31.407 30.9458 30.9459C31.4071 30.4849 31.6663 29.8595 31.6664 29.2074C31.6666 28.5552 31.4077 27.9297 30.9466 27.4684L23.4783 20.0001L30.945 12.5334C31.1734 12.3052 31.3546 12.0341 31.4782 11.7358C31.6018 11.4375 31.6655 11.1178 31.6656 10.7949C31.6657 10.4719 31.6022 10.1522 31.4787 9.85381C31.3552 9.55544 31.1741 9.28433 30.9458 9.05594C30.7175 8.82755 30.4465 8.64635 30.1482 8.52271C29.8499 8.39906 29.5301 8.33538 29.2072 8.33531C28.8843 8.33523 28.5645 8.39875 28.2662 8.52226C27.9678 8.64576 27.6967 8.82682 27.4683 9.0551L20.0016 16.5218L12.5316 9.0551C12.0708 8.59385 11.4457 8.33454 10.7937 8.33423C10.1417 8.33392 9.51623 8.59262 9.05498 9.05344C8.59372 9.51425 8.33441 10.1394 8.3341 10.7914C8.33379 11.4434 8.5925 12.0688 9.05331 12.5301L16.5233 20.0001L9.05331 27.4701C8.82502 27.6984 8.64394 27.9694 8.52039 28.2677C8.39684 28.5659 8.33325 28.8856 8.33325 29.2084C8.33325 29.5313 8.39684 29.851 8.52039 30.1492C8.64394 30.4475 8.82502 30.7185 9.05331 30.9468Z"
+        stroke="black"
+        stroke-width="1.5"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      />
+    </svg>,
+  ];
+
+  const [actnav, setactnav] = useState(false);
+  const [actbut, setactbut] = useState(1);
+  const navbarchanged = () => {
+    if (actbut == 0) {
+      setactbut(1);
+      setactnav(true);
+    } else {
+      setactbut(0);
+      setactnav(false);
+    }
+  };
+
   return (
     <div>
       <nav className="navbar">
@@ -66,27 +113,28 @@ export default function Navbar() {
           </button>
         </NavLink>
       </nav>
-      <div className="navbarphone">
+      <div className="navbarbutphone">
         <Logo />
-
-        <div className="dachboardphone">
-          <NavLink to="/" className="nav-link">
-            Home
-          </NavLink>
-
-          <NavLink to="/family" className="nav-link">
-            Family
-          </NavLink>
-
-          <NavLink to="/store" className="nav-link">
-            Store
-          </NavLink>
-
-          <NavLink to="/contact" className="nav-link">
-            Contact
-          </NavLink>
-        </div>
+        <div onClick={navbarchanged}>{svgs[actbut]}</div>
       </div>
+      {actnav && (
+        <div className="navbarphone">
+          <div className="dachboardphone">
+            <NavLink to="/" className="nav-link">
+              Home
+            </NavLink>
+            <NavLink to="/family" className="nav-link">
+              Family
+            </NavLink>
+            <NavLink to="/store" className="nav-link">
+              Store
+            </NavLink>
+            <NavLink to="/contact" className="nav-link">
+              Contact
+            </NavLink>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
