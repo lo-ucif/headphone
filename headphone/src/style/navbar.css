@@ -34,6 +34,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 0;
+  cursor: pointer;
 }
 .nav-link {
   position: relative;
@@ -46,8 +47,8 @@
 
 .nav-link:active {
   transform: translateY(6px);
-  color: #685F56;
+  color: #685f56;
 }
 .nav-link.active {
-  color: #685F56;
+  color: #685f56;
 }

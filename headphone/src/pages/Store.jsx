@@ -14,7 +14,7 @@ export default function Store() {
     setProducts((prevProducts) =>
       prevProducts.filter((product) => product.name !== nameToDelete),
     );
-    setMessage("Success: Product added");
+    setMessage("Success: Product delet");
     setClosing(false);
     setShow(true);
     setClosing(false);
@@ -57,7 +57,7 @@ export default function Store() {
       {show && (
         <div className={`interfacebuy ${closing ? "hide" : "show"}`}>
           <button
-            className={`but ${message == "Success: Product added" ? "false" : "false"}`}
+            className={`but ${message == "Success: Product delet" ? "true" : "false"}`}
             onClick={handleClose}
           >
             {message}

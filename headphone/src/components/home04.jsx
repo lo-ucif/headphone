@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../style/home04.css";
 import Text3line from "./text3line";
 import Home04but from "./home4but";
@@ -48,11 +48,11 @@ export default function Home04() {
   const [activeimg, setActiveimg] = useState(imgst01);
   const [activeColor, setActiveColor] = useState(null);
   const [lastcolor, setlastcolor] = useState(imgst01);
-  // const [fade, setFade] = useState(false);
+  const [fade, setFade] = useState(false);
   const handleClick = (id) => {
     setActiveButton(id);
 
-    // setFade(true);
+    setFade(true);
 
     setTimeout(() => {
       switch (id) {
@@ -72,53 +72,55 @@ export default function Home04() {
           break;
       }
 
-      // setFade(false);
-    }, 300);
+      setFade(false);
+    }, 200);
   };
 
   const changedcolorimg = (activedColor) => {
     setActiveColor(activedColor);
-    switch (activedColor) {
-      case "#876C8B":
-        setActiveimg(imgst05);
-        setlastcolor(imgst05);
-        break;
-      case "#86B2BD":
-        setActiveimg(imgst06);
-        setlastcolor(imgst06);
-        break;
-      case "#224692":
-        setActiveimg(imgst01);
-        setlastcolor(imgst01);
-        break;
-      case "#76563F":
-        setActiveimg(imgst08);
-        setlastcolor(imgst08);
-        break;
-      case "#FFFFFF":
-        setActiveimg(imgst09);
-        setlastcolor(imgst09);
-        break;
-      case "#B6B6B6":
-        setActiveimg(imgst10);
-        setlastcolor(imgst10);
-        break;
-      case "#5C5C5C":
-        setActiveimg(imgst11);
-        setlastcolor(imgst11);
-        break;
-      case "#000000":
-        setActiveimg(imgst07);
-        setlastcolor(imgst07);
+    setFade(true);
+    setTimeout(() => {
+      switch (activedColor) {
+        case "#876C8B":
+          setActiveimg(imgst05);
+          setlastcolor(imgst05);
+          break;
+        case "#86B2BD":
+          setActiveimg(imgst06);
+          setlastcolor(imgst06);
+          break;
+        case "#224692":
+          setActiveimg(imgst01);
+          setlastcolor(imgst01);
+          break;
+        case "#76563F":
+          setActiveimg(imgst08);
+          setlastcolor(imgst08);
+          break;
+        case "#FFFFFF":
+          setActiveimg(imgst09);
+          setlastcolor(imgst09);
+          break;
+        case "#B6B6B6":
+          setActiveimg(imgst10);
+          setlastcolor(imgst10);
+          break;
+        case "#5C5C5C":
+          setActiveimg(imgst11);
+          setlastcolor(imgst11);
+          break;
+        case "#000000":
+          setActiveimg(imgst07);
+          setlastcolor(imgst07);
 
-        break;
-      default:
-        setActiveimg(imgst01);
-        setlastcolor(imgst01);
-    }
+          break;
+        default:
+          setActiveimg(imgst01);
+          setlastcolor(imgst01);
+      }
+      setFade(false);
+    }, 200);
   };
-
-  useEffect(() => {}, [activeColor]);
 
   return (
     <div className="home04">
@@ -147,7 +149,7 @@ export default function Home04() {
         <div className="home04pref2">
           <img
             style={home04Styleimg}
-            // className={fade ? "fade" : ""}
+            className={fade ? "fade" : ""}
             src={activeimg}
           />
         </div>

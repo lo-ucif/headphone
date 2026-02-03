@@ -4,13 +4,13 @@ import img01 from "../img/11.png";
 import img02 from "../img/12.png";
 import img03 from "../img/16.png";
 import img04 from "../img/17.png";
-import img05 from "../img/18.png";
+import img05 from "../img/22.png";
 import img06 from "../img/19.png";
 import img07 from "../img/13.png";
 import img08 from "../img/20.png";
 import img09 from "../img/21.png";
 import img10 from "../img/14.png";
-import img11 from "../img/22.png";
+import img11 from "../img/18.png";
 import img12 from "../img/15.png";
 export default function Family() {
   const familyItems = [
@@ -204,7 +204,7 @@ export default function Family() {
         item={familyItems}
         title01={"v1 2022"}
         title02={"version one headphones"}
-        title03={"after 4 years"} 
+        title03={"after 4 years"}
       />
       <Familydes
         item={headsetItems}

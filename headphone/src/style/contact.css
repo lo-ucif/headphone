@@ -7,7 +7,7 @@
   background: #f6f6f6;
   flex-wrap: wrap;
   gap: 55px;
-  flex-direction: column; 
+  flex-direction: column;
 }
 .contactprepre {
   display: flex;
@@ -32,4 +32,47 @@
   flex: 1;
   border-radius: 40px;
   /* padding: 40px; */
+}
+.styletot {
+  border-radius: 30px;
+  background: #eeeef2;
+  display: flex;
+  padding: 16px 20px 16px 16px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.stylep1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.styletxt01 {
+  color: #000;
+  font-family: "Itim", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.styletxt02 {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+.styletot.active .styletxt02 {
+  margin-top: 10px;
+  margin-right: 25px;
+  margin-bottom: 20px;
 }
