@@ -42,7 +42,7 @@ export default function Store() {
         title02={products.length === 0 ? "No Element" : "My purchases"}
         title03={products.length === 0 ? "wait" : ""}
       />
-      <div className="storepre">
+      <div className="storepre"> 
         {products.map((product) => (
           <Storepre
             namehead={product.name}

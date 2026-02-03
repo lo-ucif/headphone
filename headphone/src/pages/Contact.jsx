@@ -3,14 +3,8 @@ import { useState } from "react";
 import imgst01 from "../img/tom iphone.png";
 import "../style/contact.css";
 import Contact4but from "../components/contact4but";
+
 export default function Contact() {
-  const home04Styleimg = {
-    width: "650px",
-    height: "650px",
-    flexShrink: 0,
-    aspectRatio: "1 / 1",
-    borderRadius: "40px",
-  };
   const icons = [
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -22,9 +16,9 @@ export default function Contact() {
       <path
         d="M14 18.6666V13.9999M14 9.33325H14.0117M25.6667 13.9999C25.6667 20.4432 20.4434 25.6666 14 25.6666C7.55672 25.6666 2.33337 20.4432 2.33337 13.9999C2.33337 7.5566 7.55672 2.33325 14 2.33325C20.4434 2.33325 25.6667 7.5566 25.6667 13.9999Z"
         stroke="black"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>,
     <svg
@@ -47,7 +41,6 @@ export default function Contact() {
         strokeLinejoin="round"
       />
     </svg>,
-
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="28"
@@ -70,7 +63,6 @@ export default function Contact() {
         strokeLinejoin="round"
       />
     </svg>,
-
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="28"
@@ -84,7 +76,33 @@ export default function Contact() {
       />
     </svg>,
   ];
-  const [active, setactive] = useState();
+
+  const [active, setActive] = useState(null);
+
+  const contactItems = [
+    {
+      title: "About me",
+      text: "Software Engineering student | Front-End development. I work with Figma for UI/UX design and build interfaces using React and JavaScript, with experience in Java.",
+      svg: icons[0],
+      link: null,
+    },
+    {
+      title: "Contact us",
+      svg: icons[1],
+      link: "https://mail.google.com/mail/?view=cm&to=louciftamer3@gmail.com",
+    },
+    {
+      title: "LinkedIn",
+      svg: icons[2],
+      link: "https://www.linkedin.com/in/ahmed-loucif-757854342",
+    },
+    {
+      title: "GitHub",
+      svg: icons[3],
+      link: "https://github.com/lo-ucif",
+    },
+  ];
+
   return (
     <div className="contact">
       <Text3line
@@ -94,56 +112,38 @@ export default function Contact() {
       />
       <div className="contactprepre">
         <div className="contactpref1">
-          <Contact4but
-            title={"About me"}
-            text={
-              "Software Engineering student | Front-End development.I work with Figma for UI/UX design and build interfaces using React and JavaScript, with experience in Java."
+          {contactItems.map((item, index) => {
+            const button = (
+              <Contact4but
+                key={index}
+                title={item.title}
+                text={item.text}
+                svg={item.svg}
+                active={active}
+                onClick={() => setActive(index + 1)}
+              />
+            );
+
+            if (item.link) {
+              return (
+                <a
+                  key={index}
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none" }}
+                >
+                  {button}
+                </a>
+              );
             }
-            svg={icons[0]}
-            active={active}
-            onClick={() => setactive(1)}
-          />
-          <a
-            href="https://mail.google.com/mail/?view=cm&to=louciftamer3@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <Contact4but
-              title="Contact us"
-              svg={icons[1]}
-              onClick={() => setactive(2)}
-            />
-          </a>
 
-          <a
-            href="https://www.linkedin.com/in/ahmed-loucif-757854342"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <Contact4but
-              title="LinkedIn"
-              svg={icons[2]}
-              onClick={() => setactive(3)}
-            />
-          </a>
-
-          <a
-            href="https://github.com/lo-ucif"
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <Contact4but
-              title="GitHub"
-              svg={icons[3]}
-              onClick={() => setactive(4)}
-            />
-          </a>
+            return button;
+          })}
         </div>
+
         <div className="contactpref2">
-          <img style={home04Styleimg} src={imgst01} />
+          <img src={imgst01} />
         </div>
       </div>
     </div>

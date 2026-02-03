@@ -1,6 +1,6 @@
 .store {
   display: flex;
-  padding: 60px 62px 400px 62px;
+  padding: 60px 0px 400px 0px;
   justify-content: center;
   align-items: center;
   background: #f6f6f6;
@@ -15,19 +15,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 49px;
+  gap: 40px;
 }
 .storele {
   display: flex;
-  width: 1240px;
-  height: 192px;
-  overflow: hidden;
   padding: 0 16px;
   border-radius: 40px;
   background: #fff;
   align-items: center;
   gap: 56px;
-
   transition:
     transform 0.35s ease,
     box-shadow 0.35s ease;
@@ -47,8 +43,7 @@
 
 .storeinfo {
   display: flex;
-  width: 949px;
-  padding: 18px 25px;
+  padding: 18px;
   flex-direction: column;
   align-items: center;
   gap: 5px;
@@ -64,7 +59,6 @@
 }
 .namehead {
   display: flex;
-  height: 59px;
   flex-direction: row;
   justify-content: space-between;
   align-self: stretch;
@@ -78,12 +72,11 @@
 }
 .threebut {
   display: flex;
-  width: 248px;
   padding: 16px;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border-radius: 400px;
+  border-radius: 40px;
   background: #fff;
   color: #000;
   text-align: center;
@@ -136,5 +129,23 @@
   }
   100% {
     box-shadow: 0 0 0 0 rgba(211, 47, 47, 0);
+  }
+}
+@media (max-width: 768px) {
+  .store {
+    padding: 2%;
+  }
+  .otherinf {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .storele {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 16px;
+  }
+  .namehead {
+    flex-direction: column;
   }
 }
