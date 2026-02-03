@@ -1,4 +1,4 @@
-import "../style/buttonStyle.css";
+import "../style/buttonstyle.css";
 export default function Familtbut01({ color, value, onClicked }) {
   const butstyle = {
     display: "flex",

@@ -1,4 +1,4 @@
-import "../style/buttonStyle.css"
+import "../style/buttonstyle.css";
 export default function Homebut01({ value }) {
   const buttonStyle = {
     display: "flex",
