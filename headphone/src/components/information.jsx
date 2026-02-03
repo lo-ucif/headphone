@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "../style/information.css";
-import "../style/buttonStyle.css";
+import "../style/buttonstyle.css";
 
 export default function Information({ text010, text020, onClose, img, info }) {
   const [animate, setAnimate] = useState(false);
