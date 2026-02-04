@@ -1,11 +1,11 @@
 import Text3line from "./text3line";
 import Home03head from "./home03head";
 import { NavLink } from "react-router-dom";
-import img01 from "../img/12.png";
-import img02 from "../img/11.png";
-import img03 from "../img/13.png";
-import img04 from "../img/14.png";
-import img05 from "../img/15.png";
+import img01 from "../img/12.webp";
+import img02 from "../img/11.webp";
+import img03 from "../img/13.webp";
+import img04 from "../img/14.webp";
+import img05 from "../img/15.webp";
 export default function Home03() {
   return (
     <div className="home03">

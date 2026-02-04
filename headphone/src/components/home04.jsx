@@ -3,17 +3,17 @@ import "../style/home04.css";
 import "../style/home.css";
 import Text3line from "./text3line";
 import Home04but from "./home4but";
-import imgst01 from "../img/pl g6.jpg";
-import imgst02 from "../img/plg01.png";
-import imgst03 from "../img/pl g9.jpg";
-import imgst04 from "../img/plg02.jpg";
-import imgst05 from "../img/pl g5.jpg";
-import imgst06 from "../img/g14.png";
-import imgst07 from "../img/6.jpg";
-import imgst08 from "../img/10.jpg";
-import imgst09 from "../img/7.jpg";
-import imgst10 from "../img/8.jpg";
-import imgst11 from "../img/12.jpg";
+import imgst01 from "../img/pl g6.webp";
+import imgst02 from "../img/plg01.webp";
+import imgst03 from "../img/pl g9.webp";
+import imgst04 from "../img/plg02.webp";
+import imgst05 from "../img/pl g5.webp";
+import imgst06 from "../img/g14.webp";
+import imgst07 from "../img/6.webp";
+import imgst08 from "../img/10.webp";
+import imgst09 from "../img/7.webp";
+import imgst10 from "../img/8.webp";
+import imgst11 from "../img/12.webp";
 
 const info = [
   {

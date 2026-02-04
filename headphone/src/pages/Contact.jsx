@@ -1,6 +1,6 @@
 import Text3line from "../components/text3line";
 import { useState } from "react";
-import imgst01 from "../img/tom iphone.png";
+import imgst01 from "../img/tom iphone.webp";
 import "../style/contact.css";
 import Contact4but from "../components/contact4but";
 
