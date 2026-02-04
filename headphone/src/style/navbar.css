@@ -12,15 +12,43 @@
 }
 .dachboard {
   padding: 16px 35px;
-  justify-content: center;
   border-radius: 400px;
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
-  gap: 60px;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 60px;
+
+  transform: scaleX(0);
+  transform-origin: center;
+  opacity: 0;
 }
+
+.dachboard.init {
+  animation: dashboardOpen 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes dashboardOpen {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+    border-radius: 999px;
+  }
+  65% {
+    transform: scaleX(1.06);
+    opacity: 1;
+    border-radius: 120px;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+    border-radius: 400px;
+  }
+}
+
 .navbarbut {
   display: inline-flex;
   padding: 6px 35px;
@@ -54,13 +82,16 @@
 }
 .navbarphone {
   position: fixed;
-  top: -200px;
+  top: 7%;
   left: 50%;
-  transform: translateX(-50%);
-  border-radius: 20px;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: center;
+  border-radius: 40px;
 
   flex-direction: column;
   width: 90%;
+  max-width: 420px;
+
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -68,37 +99,10 @@
 
   opacity: 0;
   z-index: 950;
+
   background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-.navbarphone.show {
-  animation: slideDownNav 0.6s ease forwards;
-}
-
-.navbarphone.hide {
-  animation: slideUpNav 0.6s ease forwards;
-}
-@keyframes slideDownNav {
-  from {
-    top: -200px;
-    opacity: 0;
-  }
-  to {
-    top: 7%;
-    opacity: 1;
-  }
-}
-
-@keyframes slideUpNav {
-  from {
-    top: 7%;
-    opacity: 1;
-  }
-  to {
-    top: -200px;
-    opacity: 0;
-  }
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
 }
 
 .dachboardphone {
@@ -161,4 +165,42 @@
   100% {
     transform: scale(1);
   }
+}
+.navbarphone.show {
+  animation: islandOpen 0.55s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+@keyframes islandOpen {
+  0% {
+    transform: translateX(-50%) scaleX(0);
+    opacity: 0;
+    border-radius: 999px;
+  }
+  60% {
+    transform: translateX(-50%) scaleX(1.05);
+    opacity: 1;
+    border-radius: 26px;
+  }
+  100% {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+    border-radius: 20px;
+  }
+}
+.navbarphone.hide {
+  animation: islandClose 0.45s ease forwards;
+}
+@keyframes islandClose {
+  from {
+    transform: translateX(-50%) scaleX(1);
+    opacity: 1;
+    border-radius: 20px;
+  }
+  to {
+    transform: translateX(-50%) scaleX(0);
+    opacity: 0;
+    border-radius: 999px;
+  }
+}
+.navbarphone {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
 }

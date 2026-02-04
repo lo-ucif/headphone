@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Logo from "./logo";
 import "../style/navbar.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Navbar() {
   const svgs = [
@@ -90,12 +90,18 @@ export default function Navbar() {
     }
   };
 
+  const [init, setInit] = useState(false);
+
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setInit(true);
+  }, []);
   return (
     <div>
       <nav className="navbar">
         <Logo />
 
-        <div className="dachboard">
+        <div className={`dachboard ${init ? "init" : ""}`}>
           <NavLink to="/" className="nav-link">
             Home
           </NavLink>
