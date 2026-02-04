@@ -86,7 +86,7 @@
   left: 50%;
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
-  border-radius: 40px;
+  border-radius: 20px;
 
   flex-direction: column;
   width: 90%;
@@ -173,12 +173,10 @@
   0% {
     transform: translateX(-50%) scaleX(0);
     opacity: 0;
-    border-radius: 999px;
   }
   60% {
     transform: translateX(-50%) scaleX(1.05);
     opacity: 1;
-    border-radius: 26px;
   }
   100% {
     transform: translateX(-50%) scaleX(1);
@@ -198,7 +196,6 @@
   to {
     transform: translateX(-50%) scaleX(0);
     opacity: 0;
-    border-radius: 999px;
   }
 }
 .navbarphone {
